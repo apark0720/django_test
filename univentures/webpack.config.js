@@ -7,7 +7,7 @@ module.exports = {
     entry: './frontend/index.jsx',
 
     output: {
-        path: path.resolve(__dirname, 'univentures', 'frontend'),
+        path: path.resolve(__dirname, 'frontend'),
         filename: 'bundle.js',
     },
 
