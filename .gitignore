@@ -13,8 +13,8 @@
 /config/application.yml
 
 # Ignore node modules
-node_modules
+/univentures/node_modules
 
 # Ignore bundle
-bundle.js
-bundle.js.map
+/univentures/frontend/bundle.js
+/univentures/frontend/bundle.js.map
