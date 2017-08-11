@@ -1,1 +1,5 @@
+<<<<<<< HEAD
+{"status":"error","chunks":{"main":[{"name":"bundle.js","path":"/home/alex/Univentures/univentures/frontend/bundle.js"}]},"error":"ModuleBuildError","message":"Module build failed: Error: ENOENT: no such file or directory, open '/home/alex/Univentures/univentures/frontend/index.jsx'\n    at Error (native)"}
+=======
 {"status":"done","chunks":{"main":[{"name":"bundle.js","path":"/home/young/Univentures/univentures/frontend/bundle.js"}]}}
+>>>>>>> 8568eea879ff26aee111cdffe4fe4dbd18abff2e
