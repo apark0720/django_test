@@ -1,0 +1,1 @@
+{"status":"error","chunks":{"main":[{"name":"bundle.js","path":"/home/alex/Univentures/univentures/frontend/bundle.js"}]},"error":"ModuleBuildError","message":"Module build failed: Error: ENOENT: no such file or directory, open '/home/alex/Univentures/univentures/frontend/index.jsx'\n    at Error (native)"}
