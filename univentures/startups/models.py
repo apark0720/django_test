@@ -1,3 +1,10 @@
 from django.db import models
 
-# Create your models here.
+class Startup(models.Model):
+    startup_name = models.CharField(max_length=20)
+    statrup_email = models.CharField(max_length=20)
+    startup_logo = models.FileField()
+    startup_description = models.TextField()
+
+    def __str__(self):
+        return self.startup_name
