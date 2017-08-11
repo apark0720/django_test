@@ -130,6 +130,9 @@ Contact
 - Application form tool provides example questions from previous competitions 
 - Competition users can manage applications (sort/filter, approve/deny, send messages)
 
+#### mutuals
+- Use FB API to search mutuals
+
 
 ### Resources
 

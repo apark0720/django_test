@@ -5,6 +5,7 @@ class Startup(models.Model):
     statrup_email = models.CharField(max_length=20)
     startup_logo = models.FileField()
     startup_description = models.TextField()
+    # user_id
 
     def __str__(self):
         return self.startup_name
