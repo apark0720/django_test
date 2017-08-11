@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'startups.apps.StartupsConfig',
     'users.apps.UsersConfig',
+    'tags.apps.TagsConfig',
 ]
 
 MIDDLEWARE_CLASSES = [
