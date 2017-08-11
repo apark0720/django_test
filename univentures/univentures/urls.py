@@ -10,5 +10,8 @@ urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='index.html')),
     url(r'^admin/', admin.site.urls),
     url(r'^startups/', s_views.StartupList.as_view()),
+    url(r'^startups/(?P<pk>\d+)/$', s_views.StartupDetail.as_view()),
     url(r'^profile/', t_views.ProfileList.as_view()),
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)
