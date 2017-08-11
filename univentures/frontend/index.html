@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Univentures</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+    {% load render_bundle from webpack_loader %}
+        <div id="root"></div>
+    {% render_bundle 'main' %}
+    </body>
+</html>
