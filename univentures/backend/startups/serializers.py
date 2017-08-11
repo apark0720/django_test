@@ -6,8 +6,8 @@ class StartupSerializer(serializers.Serializer):
     name = serializers.CharField(max_length=20)
     email = serializers.CharField(max_length=30)
     logo = serializers.FileField()
-    blurb = serializers.TextField(max_length=150)
-    description = serializers.TextField(max_length=1000)
+    blurb = serializers.CharField(max_length=150)
+    description = serializers.CharField(max_length=1000)
 
     def create(self, validated_data):
         # create and return new Startup object, given the validated data
