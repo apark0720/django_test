@@ -9,8 +9,8 @@ from django.views.generic.base import TemplateView
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='index.html')),
     url(r'^admin/', admin.site.urls),
-    url(r'^startups/$', s_views.StartupList.as_view()),
-    url(r'^startups/(?P<pk>[0-9]+)$', s_views.StartupDetail.as_view()),
+    url(r'^api/startups/$', s_views.StartupList.as_view()),
+    url(r'^api/startups/(?P<pk>[0-9]+)$', s_views.StartupDetail.as_view()),
     url(r'^profile/', t_views.ProfileList.as_view()),
 ]
 
