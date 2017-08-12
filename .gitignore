@@ -14,7 +14,7 @@
 /config/application.yml
 
 # Ignore node modules
-/univentures/node_modules/
+/node_modules/
 
 # Ignore bundle
 /univentures/frontend/bundle.js
