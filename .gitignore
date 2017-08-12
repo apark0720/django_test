@@ -16,6 +16,8 @@
 
 # Ignore node modules
 /node_modules/
+/univentures/node_modules/
+/univentures/node_modules/*
 
 # Ignore bundle
 /univentures/frontend/bundle.js
