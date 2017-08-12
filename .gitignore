@@ -12,6 +12,7 @@
 
 # Ignore application configuration
 /config/application.yml
+/univentures/webpack-stats.json
 
 # Ignore node modules
 /node_modules/
