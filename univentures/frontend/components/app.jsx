@@ -11,7 +11,7 @@ import NavBar from './nav_bar';
 // import UserProfileContainer from './user/user_profile_container';
 // import Footer from './footer';
 
-const app = () => (
+const App = () => (
     <div>
         <header>
             <NavBar />
