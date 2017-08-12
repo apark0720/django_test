@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-import AuthModal from '../auth_modal';
+import AuthModal from './auth_modal';
 
 class SessionForm extends React.Component {
     constructor(props) {
