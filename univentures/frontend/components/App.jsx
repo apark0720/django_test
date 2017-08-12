@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 
 // import { ProtectedRoute } from '../util/route_util';
 
-// import NavBar from './nav_bar';
+import NavBar from './NavBar';
 // import MainPage from './main_page';
 // import TrainerListContainer from './trainers/trainer_list_container';
 // import TrainerDetailContainer from './trainers/trainer_detail_container';
@@ -14,6 +14,7 @@ import { Route, Switch } from 'react-router-dom';
 const App = () => (
     <div>
         <header>
+            <NavBar />
         </header>
 
         <div>
