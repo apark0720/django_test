@@ -1,18 +1,19 @@
-from rest_framework import status
-from rest_framework.decorators import api_view
+from django.http import Http404
+from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework import status
 from .models import Startup
 from .serializers import StartupSerializer
 
-@api_view(['GET', 'POST'])
-def startup_list(request, format=None):
-    # list all startups, or create a new startup
-    if request.method == 'GET':
+class StartupList(APIView):
+    # List all Startups, or create a new Startup.
+
+    def get(self, request, format=None):
         startups = Startup.objects.all()
         serializer = StartupSerializer(startups, many=True)
         return Response(serializer.data)
 
-    elif request.method == 'POST':
+    def post(self, request, format=None):
         serializer = StartupSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -20,26 +21,29 @@ def startup_list(request, format=None):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-@api_view(['GET', 'PUT', 'DELETE'])
-def startup_detail(request, pk, format=None):
+class StartupDetail(APIView):
     # Retrieve, update or delete a startup instance.
-    try:
-        startup = Startup.objects.get(pk=pk)
-    except startup.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
 
-    if request.method == 'GET':
-        print (startup)
+    def get_object(self, pk):
+        try:
+            return Startup.objects.get(pk=pk)
+        except Startup.DoesNotExist:
+            raise Http404
+
+    def get(self, request, pk, format=None):
+        startup = self.get_object(pk)
         serializer = StartupSerializer(startup)
         return Response(serializer.data)
 
-    elif request.method == 'PUT':
+    def put(self, request, pk, format=None):
+        startup = self.get_object(pk)
         serializer = StartupSerializer(startup, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    elif request.method == 'DELETE':
+    def delete(self, request, pk, format=None):
+        startup = self.get_object(pk)
         startup.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
