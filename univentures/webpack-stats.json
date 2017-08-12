@@ -1,13 +1,1 @@
-<<<<<<< f579e37ca503c53444eb83ee2dfb6551e054c54f
-<<<<<<< 552fc6f509879d116a8a1dc2de3ac2686fc3ef87
-<<<<<<< 1d3fba3da694b598474457e84f2481d984b1b694
 {"status":"done","chunks":{"main":[{"name":"bundle.js","path":"/home/young/Univentures/univentures/frontend/bundle.js"}]}}
-=======
-{"status":"error","error":"ModuleNotFoundError","message":"Module not found: Error: Can't resolve '../auth_modal' in '/home/alex/Univentures/univentures/frontend/components/greetings'","chunks":{"main":[{"name":"bundle.js","path":"/home/alex/Univentures/univentures/frontend/bundle.js"}]}}
->>>>>>> rename greeting to greetings and add session api util
-=======
-{"status":"done","error":"ModuleNotFoundError","message":"Module not found: Error: Can't resolve '../util/startup_api_util' in '/home/alex/Univentures/univentures/frontend/actions'","chunks":{"main":[{"name":"bundle.js","path":"/home/alex/Univentures/univentures/frontend/bundle.js"}]}}
->>>>>>> install react-modal and fix importing in actions
-=======
-{"status":"done","chunks":{"main":[{"name":"bundle.js","path":"/home/alex/Univentures/univentures/frontend/bundle.js"}]}}
->>>>>>> add session to root reducer
