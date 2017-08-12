@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 import SessionFormContainer from '../session_form/session_form_container';
-import AuthModal from '../auth_modal';
+import AuthModal from '../session_form/auth_modal';
 
 class Greetings extends React.Component {
     constructor(props) {
