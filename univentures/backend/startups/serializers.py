@@ -1,13 +1,10 @@
 from rest_framework import serializers
 from .models import Startup
 
-class StartupSerializer(serializers.Serializer):
-    id = serializers.IntegerField(read_only=True)
-    name = serializers.CharField(max_length=20)
-    email = serializers.CharField(max_length=30)
-    logo = serializers.FileField()
-    blurb = serializers.CharField(max_length=150)
-    description = serializers.CharField(max_length=1000)
+class StartupSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Startup
+        fields = ('id', 'name', 'email', 'logo', 'blurb', 'description')
 
     def create(self, validated_data):
         # create and return new Startup object, given the validated data
