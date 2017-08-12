@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, Route } from 'react-router-dom';
 
 const NavBar = () => (
-    <nav className="navbar">
+    <nav className="navbar navbar-inverse">
         <div className="container-fluid">
             <div className="navbar-header">
                 <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
