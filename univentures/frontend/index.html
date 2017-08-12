@@ -3,11 +3,18 @@
     <head>
         <title>Univentures</title>
         <meta charset="utf-8">
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
     </head>
 
     <body>
-    {% load render_bundle from webpack_loader %}
+        {% load render_bundle from webpack_loader %}
         <div id="root"></div>
-    {% render_bundle 'main' %}
+        {% render_bundle 'main' %}
+
     </body>
 </html>

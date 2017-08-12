@@ -14,11 +14,11 @@
 /config/application.yml
 
 # Ignore node modules
-/univentures/node_modules
+univentures/node_modules
 
 # Ignore bundle
-/univentures/frontend/bundle.js
-/univentures/frontend/bundle.js.map
+univentures/frontend/bundle.js
+univentures/frontend/bundle.js.map
 
 # IDEs
 .vscode
