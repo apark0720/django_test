@@ -1,4 +1,4 @@
-import * as APIUtil from '../util/startup_api_util';
+import * as APIUtil from '../utils/startup_api_util';
 
 export const RECEIVE_STARTUPS = 'RECEIVE_STARTUPS';
 export const RECEIVE_STARTUP = 'RECEIVE_STARTUP';

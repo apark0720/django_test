@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, Route } from 'react-router-dom';
 
 // import { Button } from 'react-bootstrap';
+import GreetingsContainter from './greetings/greetings_container';
 
 const NavBar = () => (
     <nav className="navbar navbar-inverse">
@@ -42,9 +43,11 @@ const NavBar = () => (
                     <a href="#">
                         <span className="glyphicon glyphicon-off" aria-hidden="true"></span>
                     </a>
-                </li>
+                </li>N
             </ul>
         </div>    
+
+        <GreetingsContainter/> 
     </nav>
 )
 
