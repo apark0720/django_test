@@ -12,13 +12,14 @@
 
 # Ignore application configuration
 /config/application.yml
+/univentures/webpack-stats.json
 
 # Ignore node modules
-univentures/node_modules
+/node_modules/
 
 # Ignore bundle
-univentures/frontend/bundle.js
-univentures/frontend/bundle.js.map
+/univentures/frontend/bundle.js
+/univentures/frontend/bundle.js.map
 
 # IDEs
 .vscode

@@ -59,40 +59,68 @@ class SessionForm extends React.Component {
         }
 
         return (
-      <div>
+            <div className='other-link'>
+                <p>{redirect.redirectMsg}</p>
+                <button className='session-redirect-btn' onClick={() => this.props.openModal(redirect.redirectForm)}>{redirect.buttonName}</button>
+            </div>
+        );
+    }
 
-        <h3>{renderMessage}</h3>
+    renderErrors() {
+        return (
+            <ul className='errors'>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
+    }
 
-          <form onSubmit={this.handleSubmit}>
-            <div>
-            <br/>
-              <input type='text'
-                value={this.state.email}
-                onChange={this.update('email')}
-                placeholder=' Enter your email address'
-                />
-              <i></i>
-            <br/>
-              <input type='password'
-                value={this.state.password}
-                onChange={this.update('password')}
-                placeholder=' Enter your password'
-                />
-              <i aria-hidden='true'></i>
-            <br/>
+    render() {
+        const renderMessage = (
+            this.props.formType === 'login' ? 'Log In' : 'Sign Up for Rolover'
+        );
 
-            {this.renderErrors()}
+        return (
+            <div className='session-form-container'>
 
-            <input type='submit' className='btn green' value={this.props.formType === 'login' ? 'Log In' : 'Sign Up'}/>
-            <button onClick={this.handleDemoClick}>Demo Account</button>
-          </div>
-        </form>
+                <h3>{renderMessage}</h3>
 
-        {this.renderRedirect()}
+                <form onSubmit={this.handleSubmit}>
+                    <div className='session-form-box'>
+                        <br />
+                        <input type='text'
+                            value={this.state.email}
+                            onChange={this.update('email')}
+                            placeholder=' Enter your email address'
+                            className='session-input'
+                        />
+                        <i className='fa fa-envelope-o fa-lg side-icon' aria-hidden='true'></i>
+                        <br />
+                        <input type='password'
+                            value={this.state.password}
+                            onChange={this.update('password')}
+                            placeholder=' Enter your password'
+                            className='session-input'
+                        />
+                        <i className='fa fa-lock fa-lg side-icon' aria-hidden='true'></i>
+                        <br />
 
-      </div>
-    );
-  }
+                        {this.renderErrors()}
+
+                        <input type='submit' className='btn green' value={this.props.formType === 'login' ? 'Log In' : 'Sign Up'} />
+                        <button className='btn demo-btn' onClick={this.handleDemoClick}>Demo Account</button>
+                    </div>
+                </form>
+
+                {this.renderRedirect()}
+
+            </div>
+        );
+    }
+
 }
 
 export default withRouter(SessionForm);
