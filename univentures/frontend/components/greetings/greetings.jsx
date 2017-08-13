@@ -14,7 +14,7 @@ class Greetings extends React.Component {
 
     handleDemoClick(e) {
         e.preventDefault();
-        this.props.login({ email: "guest@univentures.co", password: "12345678" });
+        this.props.login({ email: "guest@univentures.co", password: "uniguest103" });
     }
 
     handleLogout() {

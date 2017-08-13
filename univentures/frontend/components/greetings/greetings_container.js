@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { logout, login } from '../../actions/session_actions';
-import { clearErrors } from '../../actions/session_actions';
+import { clearErrors } from '../../actions/error_actions';
 import Greetings from './greetings';
 
 const mapStateToProps = ({ session }) => ({
